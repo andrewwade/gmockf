@@ -1,5 +1,5 @@
-#ifndef GMOCK_FMOCK_H
-#define GMOCK_FMOCK_H
+#ifndef GMOCK_FUNCTION_MOCK_H
+#define GMOCK_FUNCTION_MOCK_H
 
 #include <memory>
 #include <gmock/gmock.h>
@@ -37,7 +37,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(0, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method() constness { \
          \
        return FUNCTION_MOCK_INSTANCE(Method)->Method();\
@@ -71,7 +71,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(1, constness, \
       Method); \
   }; \
-  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
   GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1) constness { \
        return FUNCTION_MOCK_INSTANCE(Method)->Method(gmock_a1);\
@@ -147,7 +147,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(3, constness, \
       Method); \
   }; \
-  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+  std::unique_ptr< FUNCTION_MOCK_TYPE(Method)> FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
   GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -190,7 +190,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(4, constness, \
       Method); \
   }; \
-  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+  std::unique_ptr< FUNCTION_MOCK_TYPE(Method)> FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
   GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -236,7 +236,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(5, constness, \
       Method); \
   }; \
-  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
   GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -284,7 +284,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(6, constness, \
       Method); \
   }; \
-  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
   GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -335,7 +335,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(7, constness, \
       Method); \
   }; \
-  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+  std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
   GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
         GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
         GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -389,7 +389,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(8, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -447,7 +447,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(9, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -508,7 +508,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(10, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -572,7 +572,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(11, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -639,7 +639,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(12, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -709,7 +709,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(13, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -782,7 +782,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(14, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -858,7 +858,7 @@ public:\
   mutable ::testing::FunctionMocker<__VA_ARGS__> GMOCK_MOCKER_(15, constness, \
       Method); \
    }; \
-   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
+   std::unique_ptr< FUNCTION_MOCK_TYPE(Method) > FUNCTION_MOCK_INSTANCE(Method)(new FUNCTION_MOCK_TYPE(Method)("Uninterested"));\
    GMOCK_RESULT_(tn, __VA_ARGS__) ct Method( \
       GMOCK_ARG_(tn, 1, __VA_ARGS__) gmock_a1, \
       GMOCK_ARG_(tn, 2, __VA_ARGS__) gmock_a2, \
@@ -908,4 +908,4 @@ if (!FUNCTION_MOCK_INSTANCE(name) || 0 != strcmp(FUNCTION_MOCK_INSTANCE(name)->m
 EXPECT_CALL(*FUNCTION_MOCK_INSTANCE(name), call)
 
 
-#endif //GMOCK_FMOCK
+#endif //GMOCK_FUNCTION_MOCK
